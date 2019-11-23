@@ -28,7 +28,7 @@ img {
 }
 
 /* Hide the images by default */
-.mySlides {
+.slides {
   display: none;
 }
 
@@ -96,12 +96,12 @@ img {
 }
 
 /* Add a transparency effect for thumnbail images */
-.demo {
+.switcher {
   opacity: 0.6;
 }
 
 .active,
-.demo:hover {
+.switcher:hover {
   opacity: 1;
 }
 
@@ -119,11 +119,14 @@ iframe {
     <p>Disclaimer: The hymns are taken from <a href="https://archive.org/details/ShriSivaStotravaliSwamiLakshmanJoo">Swami Lakshmanjoo Maharaj's</a> and commentaries are from Sri Akshay and Sri MindDissolved ji</p>
 </div>
 <div class="container">
-  <div class="mySlides">
+  <div class="slides">
     <div class="numbertext">1 / 1</div>
-    <iframe id="hymn11_12" src="shivastotravalli/hymn1-1_1-2.html"  frameborder="0"></iframe>
+    <iframe id="hymn" src="shivastotravalli/hymn1-12.html"  frameborder="0"></iframe>
   </div>
-    
+  <div class="slides">
+      <div class="numbertext">1 / 2</div>
+      <iframe id="hymn" src="shivastotravalli/hymn1-34.html"  frameborder="0"></iframe>
+  </div>
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
 
@@ -142,8 +145,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("switcher");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
